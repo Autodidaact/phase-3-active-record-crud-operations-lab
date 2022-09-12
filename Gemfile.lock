@@ -23,10 +23,12 @@ GEM
     diff-lcs (1.4.4)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
+    language_server-protocol (3.17.0.1)
     method_source (1.0.0)
     minitest (5.14.4)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
+    prettier_print (0.1.0)
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -48,6 +50,10 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.10.0)
     rspec-support (3.10.2)
+    ruby-lsp (0.3.2)
+      language_server-protocol (~> 3.17.0)
+      sorbet-runtime
+      syntax_tree (>= 3.4)
     ruby2_keywords (0.0.5)
     sinatra (2.1.0)
       mustermann (~> 1.0)
@@ -57,7 +63,10 @@ GEM
     sinatra-activerecord (2.0.23)
       activerecord (>= 4.1)
       sinatra (>= 1.0)
+    sorbet-runtime (0.5.10415)
     sqlite3 (1.4.2)
+    syntax_tree (3.5.0)
+      prettier_print
     tilt (2.0.10)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
@@ -65,6 +74,7 @@ GEM
 
 PLATFORMS
   universal-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   activerecord (~> 6.1)
@@ -73,8 +83,9 @@ DEPENDENCIES
   rake
   require_all
   rspec
+  ruby-lsp (~> 0.3.2)
   sinatra-activerecord
   sqlite3 (~> 1.4)
 
 BUNDLED WITH
-   2.2.23
+   2.3.21
